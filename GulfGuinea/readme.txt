@@ -14,3 +14,6 @@ for installing and running the regional simulation
 
 matlab
 contains some octave-scripts scripts for looking at the model output
+
+python
+contains some python scripts for looking at the model output
