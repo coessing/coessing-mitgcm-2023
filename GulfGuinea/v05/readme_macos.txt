@@ -1,35 +1,33 @@
-# Instructions for building and running Gulf of Guinea regional
-# simulation on macOS (based on ecco_darwin/v05/llc270/readme2.txt).
-# See ecco_darwin/doc/MITgcm_on_Mac.txt for additional instructions.
+# Instructions for building and running Gulf of Guinea regional simulation
 
-==============
-# 1. Get code
-  git clone git@github.com:MITgcm-contrib/ecco_darwin.git
-  git clone git@github.com:darwinproject/darwin3
-  cd darwin3
-  git checkout 24885b71
-  mkdir build run
+# 1. Get this repository
+  git clone git@github.com:coessing/coessing-mitgcm-2023.git
 
-==============
-# 2. Build executable
+# 2. Get darwin3
+# darwin3 is a version of MITgcm that contains the Darwin package
+# for ECCO-Darwin, we use an older version of darwin3 (git tag 24885b71)
+# which will have outdated build_options files
+# a version darwin3 24885b71 with updated buil_doptions files is here:
+# https://nasa-ext.box.com/s/1vwbdy0b18g0wf0cpwn45ss72n36z0pv
+
+# 3. Check that you can run parallel MITgcm on your platform
+  cd darwin3/verification
+  ./testreport -mpi -t natl_box
+
+# 4. Build executable
+  cd ..
+  mkdir build
   cd build
-  ../tools/genmake2 -mo ../../ecco_darwin/regions/GulfGuinea/v05/code -mpi \
-   -of ../../ecco_darwin/regions/GulfGuinea/v05/code/darwin_arm64_gfortran
-  make depend
-  make -j
+  ../tools/genmake2 -mo ../../coessing-mitgcm-2023/GulfGuinea/v05/code -mpi
 
-==============
-# 3. Instructions for running simulation (1992-2023 period)
-  cd ../run
+# 5. Run 45-day simulation (January 16 1992 to March 1, 1992)
+  cd ..
+  mkdir run
+  cd run
   ln -sf ../build/mitgcmuv .
-#    Get forcing and configuration files from
-#    https://nasa-ext.box.com/s/3d3qz47tvnhp2y8wbvd821rwdxk1m2un
-#    https://nasa-ext.box.com/s/59kwo56sz7nvwvvypq3p2kkacecq7rk6
-#    and deposit or link inside the darwin3/run directory, e.g.,
-  ln -sf ~/Links/Box/Public/KelpProject/NOAA_MBL/* .
-  ln -sf ~/Links/Box/Public/GulfGuinea/run_template/* .
-#    To save space, you can download only needed years for
-#    apCO2_* and era_xx_it42_v2
+# Get forcing and configuration files from
+# https://nasa-ext.box.com/s/p6s9uqg4dnl31ws1ofvf3wousm9pjqvi
+# and copy all files contained in run_template in run directory
   mkdir diags diags/daily diags/monthly
-  cp ../../ecco_darwin/regions/GulfGuinea/v05/input/* .
+  cp ../../coessing-mitgcm-2023/GulfGuinea/v05/input/* .
   mpirun -np 6 ./mitgcmuv
