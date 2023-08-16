@@ -19,6 +19,8 @@
   mkdir build
   cd build
   ../tools/genmake2 -mo ../../coessing-mitgcm-2023/GulfGuinea/v05/code -mpi
+  make depend
+  make
 
 # 5. Run 45-day simulation (January 16 1992 to March 1, 1992)
   cd ..
