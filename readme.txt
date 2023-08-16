@@ -12,12 +12,14 @@ b) Install Linux if your are using a Windows OS
 c) Octave installation, including graphics package, on each laptop
 d) MITgcm installation instructions and notes for each laptop/OS flavor
    instructions for doing this are under doc/MITgcm_on_*.txt
+e) Everyone needs to check-in some modification, improvement,
+   clarification to github
 
 2. MITgcm:
 a) Install gfortran and MITgcm and run single-processor natl_box
 b) Install MPI and run multi-processor natl_box
 c) Install/run GulfGuinea MITgcm cutout
-d) Run above for at least 45 days (January 16 1992 to March 1, 1992)
+d) Run above for at least 15 days (January 16 1992 to Feb 1, 1992)
    using MPI on all participants laptops.
 
 3. GulfGuinea:
