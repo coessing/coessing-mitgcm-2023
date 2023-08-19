@@ -14,6 +14,7 @@ d) MITgcm installation instructions and notes for each laptop/OS flavor
    instructions for doing this are under doc/MITgcm_on_*.txt
 e) Everyone needs to check-in some modification, improvement,
    clarification to github
+f) learn to use FFmpeg
 
 2. MITgcm:
 a) Install gfortran and MITgcm and run single-processor natl_box
