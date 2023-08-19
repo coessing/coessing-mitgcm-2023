@@ -70,8 +70,8 @@
  &PARM03
  startTime  = 0.0,
  endTime    = 86400.0,
- deltaT     = 60.0,
- cAdjFreq   = 60.0,
+ deltaT     = 360.0,
+ cAdjFreq   = 360.0,
  pChkptFreq = 86400.0,
  chkptFreq  = 0.0,
  dumpFreq   = 86400.,
