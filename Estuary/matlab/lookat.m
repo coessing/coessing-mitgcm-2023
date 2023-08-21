@@ -4,7 +4,7 @@
 p1='~/mitgcm/MITgcm/run/';
 
 % Location for figure output
-p2='~/Links/Box/Public/coessing/coessing-mitgcm-2023/Estuary/figs/';
+p2='~/Links/Box/Public/coessing/coessing-mitgcm-2023/Estuary/matlab_figs/';
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
