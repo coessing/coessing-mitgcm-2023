@@ -1,0 +1,74 @@
+# *********************
+# External Forcing Data
+# *********************
+#
+ &EXF_NML_01
+  useAtmWind        = .TRUE.,
+# TO COMBINE WITH ALLOW_ZENITH_ANGLE:
+  exf_albedo        = 0.1,
+  useExfZenIncoming = .TRUE., 
+  select_ZenAlbedo  = 1,
+#
+  ocean_emissivity  = 0.97,
+  ice_emissivity    = 0.95,
+  snow_emissivity   = 0.95,
+#
+  exf_iprec         = 32,
+  exf_yftype        = 'RL',
+  useExfYearlyFields= .TRUE.,
+  useExfCheckRange  = .FALSE.,
+ /
+
+ &EXF_NML_02
+  atempfile         = 'Estuary_25x18_atemp_6hourly_3day',
+  aqhfile           = 'Estuary_25x18_aqh_6hourly_3day',
+  precipfile        = 'Estuary_25x18_preci_6hourly_3day',
+  uwindfile         = 'Estuary_25x18_uwind_6hourly_3day',
+  vwindfile         = 'Estuary_25x18_vwind_6hourly_3day',
+  swdownfile        = 'Estuary_25x18_swdn_6hourly_3day',
+  lwdownfile        = 'Estuary_25x18_lwdn_6hourly_3day',
+#
+  atempstartdate1   = 19920101,
+  atempstartdate2   = 000000,
+  atempperiod       = 21600.0,
+#
+  aqhstartdate1     = 19920101,
+  aqhstartdate2     = 000000,
+  aqhperiod         = 21600.0,
+#
+  precipstartdate1  = 19920101,
+  precipstartdate2  = 030000,
+  precipperiod      = 21600.0,
+#
+  runoffperiod      = -12,
+#
+  uwindstartdate1   = 19920101,
+  uwindstartdate2   = 000000,
+  uwindperiod       = 21600.0,
+#
+  vwindstartdate1   = 19920101,
+  vwindstartdate2   = 000000,
+  vwindperiod       = 21600.0,
+#
+  swdownstartdate1  = 19920101,
+  swdownstartdate2  = 030000,
+  swdownperiod      = 21600.0,
+#
+  lwdownstartdate1  = 19920101,
+  lwdownstartdate2  = 030000,
+  lwdownperiod      = 21600.0,
+ /
+
+ &EXF_NML_03
+ /
+
+ &EXF_NML_04
+  atemp_interpMethod  = 0,
+  aqh_interpMethod    = 0,
+  precip_interpMethod = 0,
+  runoff_interpMethod = 0,
+  uwind_interpMethod  = 0,
+  vwind_interpMethod  = 0,
+  swdown_interpMethod = 0,
+  lwdown_interpMethod = 0,
+ /
