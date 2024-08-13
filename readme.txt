@@ -35,4 +35,4 @@ Class objectives:
   c) Download to odp or pptx format on laptop for presentation,
      to avoid network issues
   d) Understand/discuss the science
-  d) Practice, Criticize, Fix, Repeat!
+  e) Practice, Criticize, Fix, Repeat!
